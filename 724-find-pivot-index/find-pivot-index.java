@@ -1,0 +1,27 @@
+class Solution {
+    public int pivotIndex(int[] nums) {
+        
+        for(int i=0;i<nums.length;i++){
+            int rigth=0;
+            int left=0;
+            for(int j=0;j<i;j++){
+                left = left+nums[j];
+            }
+
+            for(int j=i+1;j<nums.length;j++){
+                rigth +=nums[j];
+            }
+
+            if(rigth==left){
+                return i;
+            }
+
+        
+
+
+            
+        }
+        return -1;
+        
+    }
+}
